@@ -110,7 +110,7 @@ const loadHSLData = async () => {
   const stop = result.data.stop;
   console.log('loadHSLData', stop);
   const stopElement = document.createElement('div');
-  stopElement.innerHTML = `<h3>Seuraavat vuorot pysäkiltä ${stop.name}</h3><ul>`;
+  stopElement.innerHTML = `<h3>Pysäkiltä ${stop.name}</h3><ul>`;
   for (const ride of stop.stoptimesWithoutPatterns) {
     stopElement.innerHTML += `<li>${ride.trip.routeShortName},
       ${ride.trip.tripHeadsign},
@@ -123,7 +123,7 @@ const loadHSLData = async () => {
   const stop1 = result1.data.stop;
   console.log('loadHSLData', stop1);
   const stopElement1 = document.createElement('div');
-  stopElement1.innerHTML = `<h3>Seuraavat vuorot pysäkiltä ${stop1.name}</h3><ul>`;
+  stopElement1.innerHTML = `<h3>Pysäkiltä ${stop1.name}</h3><ul>`;
   for (const ride of stop1.stoptimesWithoutPatterns) {
     stopElement1.innerHTML += `<li>${ride.trip.routeShortName},
       ${ride.trip.tripHeadsign},
@@ -136,7 +136,7 @@ const loadHSLData = async () => {
   const stop2 = result2.data.stop;
   console.log('loadHSLData', stop2);
   const stopElement2 = document.createElement('div');
-  stopElement2.innerHTML = `<h3>Seuraavat vuorot pysäkiltä ${stop2.name}</h3><ul>`;
+  stopElement2.innerHTML = `<h3>Pysäkiltä ${stop2.name}</h3><ul>`;
   for (const ride of stop2.stoptimesWithoutPatterns) {
     stopElement2.innerHTML += `<li>${ride.trip.routeShortName},
       ${ride.trip.tripHeadsign},
@@ -149,7 +149,7 @@ const loadHSLData = async () => {
   const stop3 = result3.data.stop;
   console.log('loadHSLData', stop3);
   const stopElement3 = document.createElement('div');
-  stopElement3.innerHTML = `<h3>Seuraavat vuorot pysäkiltä ${stop3.name}</h3><ul>`;
+  stopElement3.innerHTML = `<h3>Pysäkiltä ${stop3.name}</h3><ul>`;
   for (const ride of stop3.stoptimesWithoutPatterns) {
     stopElement3.innerHTML += `<li>${ride.trip.routeShortName},
       ${ride.trip.tripHeadsign},
@@ -162,7 +162,7 @@ const loadHSLData = async () => {
   const stop4 = result4.data.stop;
   console.log('loadHSLData', stop4);
   const stopElement4 = document.createElement('div');
-  stopElement4.innerHTML = `<h3>Seuraavat vuorot pysäkiltä ${stop4.name}</h3><ul>`;
+  stopElement4.innerHTML = `<h3>Pysäkiltä ${stop4.name}</h3><ul>`;
   for (const ride of stop4.stoptimesWithoutPatterns) {
     stopElement4.innerHTML += `<li>${ride.trip.routeShortName},
       ${ride.trip.tripHeadsign},

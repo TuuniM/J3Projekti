@@ -19,7 +19,7 @@ const setModalControls = () => {
   });
   // When the user clicks anywhere outside of the modal, close it
   document.addEventListener('click', (event) => {
-    if (event.target == modal) {
+    if (event.target === modal) {
       modal.style.display = "none";
     }
   });
