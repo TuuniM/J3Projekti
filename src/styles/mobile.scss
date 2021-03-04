@@ -6,7 +6,7 @@
   /* Show Hamburger */
   nav label {
     display: inline-block;
-    color: var(--main-em-color);
+    color: white;
     font-style: normal;
     font-size: 1.2em;
     padding: 10px;
@@ -23,6 +23,7 @@
 
   #logo-min-text {
     display: inline-block;
+  //  background: white url(../assets/img/metropolia-logo.png) no-repeat
   }
 
   nav,
@@ -30,16 +31,18 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    color: white;
   }
 
   nav ul li a:hover {
-    background-color: white;
+    background-color: var(--main-em-color);
     border-radius: 0;
-    color: var(--main-em-color);
+    color: #ffaa6e;
   }
 
   nav ul li a {
     display: block;
+    color: white;
   }
 
   nav span {
@@ -84,4 +87,9 @@
     width: 30%;
     padding-left: 1em;
   }
+
+  #homenav {
+    display: none;
+  }
+
 }
