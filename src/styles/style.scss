@@ -2,24 +2,24 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --main-em-color: #ff5900;
-    /* #AC6565 */
-    --main-bg-color: #ff5900;
-  }
+  --main-em-color: #ff5900;
+  /* #AC6565 */
+  --main-bg-color: #ff5900;
+}
 
 body {
-    font-family: 'Lato', sans-serif;
-    font-size: 1em;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* p {
@@ -32,157 +32,157 @@ a {
 /* Hamburger menu */
 /* Hide Hamburger */
 nav > label, #hamburger {
-    display: none;
-  }
+  display: none;
+}
 
 nav {
-    display: flex;
-    position: sticky;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    top: 0;
-    background-color: white;
-    color: #fff;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    font-size: 1.2em;
+  display: flex;
+  position: sticky;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  top: 0;
+  background-color: white;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 nav ul {
-    display: flex;
-    align-content: center;
-    list-style-type: none;
+  display: flex;
+  align-content: center;
+  list-style-type: none;
 }
 
 nav ul a {
-    color: var(--main-em-color);
-    padding: 0.6rem;
-    margin: 0 0.25em;
+  color: var(--main-em-color);
+  padding: 0.6rem;
+  margin: 0 0.25em;
 }
 
 nav ul li a:hover {
-    background-color: white;
-    border-radius: 5px;
-    color: #ffa853;
+  background-color: white;
+  border-radius: 5px;
+  color: #ffa853;
 }
 
 nav span {
-    width: 20vw;
+  width: 20vw;
 }
 
 #search {
-    width: 100%;
-    min-width: 50px;
-    box-sizing: border-box;
-    padding: 0.5rem 1.5rem 0.5rem 35px;
-    margin: 0.5rem 0;
-    display: inline-block;
-    border: 1px solid var(--main-em-color);
-    border-radius: 4px;
-    outline: none;
+  width: 100%;
+  min-width: 50px;
+  box-sizing: border-box;
+  padding: 0.5rem 1.5rem 0.5rem 35px;
+  margin: 0.5rem 0;
+  display: inline-block;
+  border: 1px solid var(--main-em-color);
+  border-radius: 4px;
+  outline: none;
 
 }
 #search-form {
-    position: relative;
+  position: relative;
 }
 
 #search-img {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
 }
 
 #search-img > svg {
-    fill:  var(--main-em-color);
+  fill:  var(--main-em-color);
 }
 
 #showcase {
-    display: flex;
-    height: 30vh;
-    font-family: 'Roboto Slab', serif;
+  display: flex;
+  height: 30vh;
+  font-family: 'Roboto Slab', serif;
 }
 
 #showcase-logoarea {
-    flex: 4;
-    background-color: var(--main-bg-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex: 4;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo-text {
-    color: white;
-    font-size: 60px;
-    font-weight: 800;
+  color: white;
+  font-size: 60px;
+  font-weight: 800;
 }
 
 #logo-min-text {
-    color: white;
-    font-weight: 800;
-    position: absolute;
-    top: 19px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.2em;
-    display: none;
+  color: white;
+  font-weight: 800;
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2em;
+  display: none;
 }
 
 #slogan {
-    color: white;
-    font-size: 23px;
-    font-weight: 400;
+  color: white;
+  font-size: 23px;
+  font-weight: 400;
 }
 
 #showcase-imgarea {
-    flex: 6;
-    background: white url(../assets/img/karamalmiulkovaakanokia.jpg)
-    no-repeat center center/cover;
+  flex: 6;
+  background: white url(../assets/img/karamalmiulkovaakanokia.jpg)
+  no-repeat center center/cover;
 }
 
 #triangle {
-    width: 0;
-	height: 0;
-	border-bottom: 30vh solid var(--main-bg-color);
-	border-right: 10vw solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom: 30vh solid var(--main-bg-color);
+  border-right: 10vw solid transparent;
 }
 
 .info-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: lightpink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: lightpink; */
 }
 
 #info-text {
-    width: 80vw;
-    padding: 2em 0;
-    text-align: center;
-    /* This way the text wont wrap */
-    font-size: 1.5em;
+  width: 80vw;
+  padding: 2em 0;
+  text-align: center;
+  /* This way the text wont wrap */
+  font-size: 1.5em;
 }
 
 .restaurant-area {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 1em;
 }
 
 .restaurant {
-    width: 48%;
-    padding: 1em;
-    background-color: #f3f3f3;
-    margin: 1em 0;
-    border: 1px solid var(--main-em-color);
-    border-radius: 2px;
-    display: flex;
+  width: 48%;
+  padding: 1em;
+  background-color: #f3f3f3;
+  margin: 1em 0;
+  border: 1px solid var(--main-em-color);
+  border-radius: 2px;
+  display: flex;
 }
 
 ul {
@@ -190,98 +190,260 @@ ul {
 }
 
 .res-logo {
-    flex: 3;
+  flex: 3;
 }
 
 .res-logo > img {
-    width: 100%;
-    cursor: pointer;
+  width: 100%;
+  cursor: pointer;
 }
 
 .res-logo > img:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .res-menu {
-    flex: 7;
-    padding: 0 0 1em 1em;
-    line-height: 120%;
+  flex: 7;
+  padding: 0 0 1em 1em;
+  line-height: 120%;
 }
 
 /* reset for all of the fonts */
 .res-menu > * {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 /* res heading first */
 .res-heading {
-    margin-bottom: 20px;
-    font-weight: 900;
-    font-size: 21px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 #location-icon {
-    width: 25px;
-    position: relative;
-    top: 10px;
+  width: 25px;
+  position: relative;
+  top: 10px;
 }
 
 #location-icon:hover {
-    fill: var(--main-bg-color);
+  fill: var(--main-bg-color);
 }
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
 
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-  #info-text {
-    font-size: 17px;
-  }
+#info-text {
+  font-size: 17px;
+}
 
-  #homenav {
-    background: white url(../assets/img/metropolia-logo.png)
-    no-repeat center center/cover;
-    color: transparent;
-  }
+#homenav {
+  background: white url(../assets/img/metropolia-logo.png)
+  no-repeat center center/cover;
+  color: transparent;
+}
 
-  #ruoka-hinta {
-    font-weight: bold;
-  }
+#ruoka-hinta {
+  font-weight: bold;
+}
 
+#bus {
+  color: #7575ff;
+}
+
+#train {
+  color: #d741d7;
+}
+
+
+.weather-card {
+  margin: 60px auto;
+  height: 740px;
+  width: 450px;
+  background: #fff;
+  box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.weather-card .top {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722376/after_noon.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top .wrapper .mynav {
+  height: 20px;
+}
+.weather-card .top .wrapper .mynav .lnr {
+  color: #fff;
+  font-size: 20px;
+}
+.weather-card .top .wrapper .mynav .lnr-chevron-left {
+  display: inline-block;
+  float: left;
+}
+.weather-card .top .wrapper .mynav .lnr-cog {
+  display: inline-block;
+  float: right;
+}
+.weather-card .top .wrapper .heading {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: 400;
+  color: #fff;
+}
+.weather-card .top .wrapper .location {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: 400;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp {
+  margin-top: 20px;
+}
+.weather-card .top .wrapper .temp a {
+  text-decoration: none;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp a .temp-type {
+  font-size: 85px;
+}
+.weather-card .top .wrapper .temp .temp-value {
+  display: inline-block;
+  font-size: 85px;
+  font-weight: 600;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp .deg {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.weather-card .top:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.weather-card .bottom {
+  padding: 0 30px;
+  background: #fff;
+}
+.weather-card .bottom .wrapper .forecast {
+  overflow: hidden;
+  margin: 0;
+  font-size: 0;
+  padding: 0;
+  padding-top: 20px;
+  max-height: 155px;
+}
+.weather-card .bottom .wrapper .forecast a {
+  text-decoration: none;
+  color: #000;
+}
+.weather-card .bottom .wrapper .forecast .go-up {
+  text-align: center;
+  display: block;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.weather-card .bottom .wrapper .forecast li {
+  display: block;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.25);
+  line-height: 1em;
+  margin-bottom: 30px;
+}
+.weather-card .bottom .wrapper .forecast li .date {
+  display: inline-block;
+}
+.weather-card .bottom .wrapper .forecast li .condition {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  font-size: 25px;
+}
+.weather-card .bottom .wrapper .forecast li .condition .temp {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 2px;
+}
+.weather-card .bottom .wrapper .forecast li .condition .temp .deg {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 3px;
+  vertical-align: top;
+}
+.weather-card .bottom .wrapper .forecast li .condition .temp .temp-type {
+  font-size: 20px;
+}
+.weather-card .bottom .wrapper .forecast li.active {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#saanyt {
+  color: white;
+  font-size: 80px;
+}
+
+#tulevasaa {
+  color: white;
+}
