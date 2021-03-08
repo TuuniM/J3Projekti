@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8" />
-  <title>Metropolia Karamalmin kampus | Etsi lähimmät ruokalistat</title>
+  <title></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <!-- tää alempi linkki aiheuttaa jotain hämärää -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,15 +15,24 @@
 <nav>
   <label for="hamburger">&#9776;</label>
   <input type="checkbox" id="hamburger" />
-  <div id="logo-min-text">logotähan</div>
+  <div id="logo-min-text"><img src="./assets/img/metropolia-logo.png" width="80px" height="40px"></div>
+
   <ul>
     <li><a id="homenav" href="#">Etusivu</a></li>
-    <li><a href="#infonav">Info</a></li>
-    <li><a href="#restaurantnav">Ruokalistat</a></li>
-    <li><a href="#weather-section">Sää</a></li>
-    <li><a href="#transport">Reitit</a></li>
-    <li><a href="#contact">Yhteystiedot</a></li>
+    <li><a href="#infonav" id="info"></a></li>
+    <li><a href="#ruoka" id="ruokalistat"></a></li>
+    <li><a href="#saa" id="weather"></a></li>
+    <li><a href="#hsl" id="reitit"></a></li>
+    <li><a href="#contact" id="yhteystiedot"></a></li>
+
   </ul>
+
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary active" id="switch-lang">
+      EN
+    </label>
+  </div>
+  <!--
   <span>
       <form id="search-form">
         <label for="search" id="search-img">
@@ -100,352 +109,276 @@
         <input type="text" name="search" id="search" placeholder="">
       </form>
     </span>
+    -->
 </nav>
 <!-- Headerlogo -->
-<header id="showcase">
-  <div id="showcase-logoarea">
-    <div id="logo-text">Metropolia</div>
-    <div id="slogan">Karamalmin kampus</div>
-  </div>
-  <div id="showcase-imgarea">
-    <div id="triangle"></div>
-  </div>
-</header>
-<!-- Main area with infotext and menus -->
-<main>
-  <div class="info-area" id="infonav">
+<div id="tausta">
+  <header id="showcase">
+    <div id="showcase-logoarea">
+      <div id="logo-text">Metropolia</div>
+      <div id="slogan"></div>
+    </div>
+    <div id="showcase-imgarea">
+      <div id="triangle"></div>
+    </div>
+  </header>
+  <!-- Main area with infotext and menus -->
+  <main>
+    <div class="info-area" id="infonav">
+      <div id="otsikko">Karamalmin kampus</div>
+    </div>
     <div id="info-text">
-      Metropolian kampukset ovat avoinna, mutta 31.3.2021 asti kaikkea muuta kuin välttämätöntä asiointia kampuksilla pyydetään välttämään. Kampuksilla asioitaessa käytetään maskia ja noudatetaan muitakin turvatoimia.
-      <br><br>
-      Seuraamme aktiivisesti viranomaisten ohjeistuksia koronavirukseen liittyen ja muutamme niiden mukaisesti tarvittaessa toimintaamme.
+
     </div>
-  </div>
 
 
 
-  <div class="carousel-container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
-        <li data-target="#myCarousel" data-slide-to="6"></li>
-        <li data-target="#myCarousel" data-slide-to="7"></li>
-        <li data-target="#myCarousel" data-slide-to="8"></li>
-        <li data-target="#myCarousel" data-slide-to="9"></li>
-        <li data-target="#myCarousel" data-slide-to="10"></li>
-        <li data-target="#myCarousel" data-slide-to="11"></li>
-        <li data-target="#myCarousel" data-slide-to="12"></li>
-        <li data-target="#myCarousel" data-slide-to="13"></li>
-        <li data-target="#myCarousel" data-slide-to="14"></li>
-        <li data-target="#myCarousel" data-slide-to="15"></li>
-        <li data-target="#myCarousel" data-slide-to="16"></li>
-        <li data-target="#myCarousel" data-slide-to="17"></li>
-        <li data-target="#myCarousel" data-slide-to="18"></li>
-        <li data-target="#myCarousel" data-slide-to="19"></li>
-        <li data-target="#myCarousel" data-slide-to="20"></li>
-        <li data-target="#myCarousel" data-slide-to="21"></li>
-        <li data-target="#myCarousel" data-slide-to="22"></li>
-        <li data-target="#myCarousel" data-slide-to="23"></li>
-        <li data-target="#myCarousel" data-slide-to="24"></li>
-      </ol>
+    <div class="carousel-container">
+      <h2 id="tiedotteet"></h2>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
+          <li data-target="#myCarousel" data-slide-to="6"></li>
+          <li data-target="#myCarousel" data-slide-to="7"></li>
+          <li data-target="#myCarousel" data-slide-to="8"></li>
+          <li data-target="#myCarousel" data-slide-to="9"></li>
+          <li data-target="#myCarousel" data-slide-to="10"></li>
+          <li data-target="#myCarousel" data-slide-to="11"></li>
+          <li data-target="#myCarousel" data-slide-to="12"></li>
+          <li data-target="#myCarousel" data-slide-to="13"></li>
+          <li data-target="#myCarousel" data-slide-to="14"></li>
+          <li data-target="#myCarousel" data-slide-to="15"></li>
 
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="./assets/img/koronakaruselli/Dia1.JPG" alt="1 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia2.JPG" alt="2 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia3.JPG" alt="3 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia4.JPG" alt="4 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia5.JPG" alt="5 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia6.JPG" alt="6 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia7.JPG" alt="7 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia8.JPG" alt="8 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia9.JPG" alt="9 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia10.JPG" alt="10 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia11.JPG" alt="11 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia12.JPG" alt="12 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia13.JPG" alt="13 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia14.JPG" alt="14 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia15.JPG" alt="15 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia16.JPG" alt="16 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia17.JPG" alt="17 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia18.JPG" alt="18 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia19.JPG" alt="19 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia20.JPG" alt="20 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia21.JPG" alt="21 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia22.JPG" alt="22 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia23.JPG" alt="23 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia24.JPG" alt="24 slide" style="width:100%;">
-        </div>
-        <div class="item">
-          <img src="./assets/img/koronakaruselli/Dia25.JPG" alt="25 slide" style="width:100%;">
-        </div>
-      </div>
+        </ol>
 
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" id="carouseldatat">
 
 
-
-
-
-
-
-
-  <section id="restaurantnav">
-    <div class="restaurant-area">
-      <div class="restaurant">
-        <div class="res-logo" id="trigger">
-          <img src="https://pbs.twimg.com/profile_images/1094855668182499329/45bMG7Nb_400x400.jpg">
         </div>
-        <div class="res-menu">
-          <div class="res-heading">
-            <div>Sodexo Myrtsi</div>
 
-          </div>
-          <div class="dishes" id="sodexo-myyrmaki">
-            Ladataan
-          </div>
-        </div>
-      </div>
-      <div class="restaurant">
-        <div class="res-logo"><img src="./assets/img/fazer-logo.jpg" alt="fazer-logo"></div>
-        <div class="res-menu">
-          <div class="res-heading">
-            Fazer Karaportti
-          </div>
-          <div class="dishes" id="fazer-kp">
-            Ladataan
-          </div>
-          <div id="ruoka-hinta"><p>Lounaan hinta opiskelijoille 1,90€/2,70€/5,71€</p></div>
-        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
-    <div class="tool-buttons">
-      <button id="switch-lang">Switch language</button>
+    <br>
+    <br>
+
+
+
+
+
+
+    <div class="col">
+      <button class="col btn btn-orange-moon btn-rounded" id="ruokalinkki">Ruoka</button>
     </div>
-  </section><br><br>
+    <section id="ruoka"></section>
+    <section id="restaurantnav">
+      <div class="restaurant-area">
 
-  <section id="weather-section">
-    <div class="container">
-      <div class="card" id="weather">
-        <div class="card-body" id="weather-body">
+        <div class="restaurant" id="sodexo">
+          <div class="res-logo" id="trigger">
+            <img src="https://pbs.twimg.com/profile_images/1094855668182499329/45bMG7Nb_400x400.jpg">
+          </div>
+          <div class="res-menu">
+            <div class="res-heading">
+              <div>Sodexo Myrtsi</div>
 
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="weather-card one">
-          <div class="top">
-            <div class="wrapper">
-
-              <ul id="weathernow"></ul>
-              <p class="temp">
-              <ul id="weather-list">
-              </ul>
-
-              </p>
+            </div>
+            <div class="dishes" id="sodexo-myyrmaki">
+              Ladataan
             </div>
           </div>
-          <div class="bottom">
-            <div class="wrapper">
-              <ul class="forecast">
+        </div>
+        <div class="card">
+          <h2 id="weekmenu"></h2>
+          <div class="restaurant">
+            <div class="res-logo"><img src="./assets/img/fazer-logo.jpg" alt="fazer-logo"></div>
+            <div class="res-menu">
+              <div class="res-heading">
+                Fazer Karaportti
+              </div>
+              <div class="dishes" id="fazer-kp">
+                Ladataan
+              </div>
+              <div id="ruoka-hinta"><p id="price"></p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
 
-                <li class="active">
-                  <span class="date">Huomenna</span>
-                  <span class="lnr lnr-cloud condition">
+    <div class="col">
+      <button class="col btn btn-orange-moon btn-rounded" id="saalinkki"></button>
+    </div>
+    <section id="saa"></section>
+    <section id="weathernav">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="weather-card one">
+              <div class="top">
+                <div class="wrapper">
+
+                  <ul id="weathernow"></ul>
+                  <p class="temp">
+                  <ul id="weather-list">
+                  </ul>
+
+                  </p>
+                </div>
+              </div>
+              <div class="bottom">
+                <div class="wrapper">
+                  <ul class="forecast">
+
+                    <li class="active">
+                      <span class="date" id="huomenna" style="color: white;"></span>
+                      <span class="lnr lnr-cloud condition">
                       <ul id="weatherfuture">
 
                 </ul>
 
 								</span>
-                </li>
-                <li class="active">
-                  <span class="date">2 Päivän päästä</span>
-                  <span class="lnr lnr-cloud condition">
+                    </li>
+                    <li class="active">
+                      <span class="date" id="2paivaa"></span>
+                      <span class="lnr lnr-cloud condition">
                       <ul id="weatherfuture2">
 
                 </ul>
 
 								</span>
-                </li>
-              </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <br>
+
+    <div class="col">
+      <button class="col btn btn-orange-moon btn-rounded" id="hsllinkki"></button>
     </div>
-  </div>
 
 
+    <section id="hsl"></section>
+    <section id="transport">
+      <div class="hslcard">
 
+        <ul id="stoplist">
+          <div class="card">
+            <h2 id="julkinenliikenne"></h2>
+            <div class="card2">
+              <button class="btn btn-primary" id="stop1">
 
-  <section id="transport">
-    <h2>Julkinen liikenne lähdöt</h2>
-    <ul>
-      <div class="card-group">
+              </button>
 
-        <div class="card" style="width: 18rem;">
-          <div class="card-header" id="stop1">
+              <div class="hsl-data" id="pysakki1">
 
-          </div>
-          <ul class="list-group list-group-flush">
-            <div class="hsl-data">
-
-            </div>
-          </ul>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <div class="card-header" id="stop2">
-
-          </div>
-          <ul class="list-group list-group-flush">
-            <div class="hsl-data2">
+              </div>
 
             </div>
-          </ul>
-        </div>
 
-        <div class="card" style="width: 18rem;">
-          <div class="card-header" id="stop3">
+            <div class="card2">
+              <button class="btn btn-primary" id="stop2">
 
-          </div>
-          <ul class="list-group list-group-flush">
-            <div class="hsl-data3">
+              </button>
+
+              <div class="hsl-data2" id="pysakki2">
+
+              </div>
 
             </div>
-          </ul>
-        </div>
+
+            <div class="card2">
+              <button class="btn btn-primary" id="stop3">
+
+              </button>
+
+              <div class="hsl-data3" id="pysakki3">
+
+              </div>
+
+            </div>
+
+
+            <div class="card2">
+              <button class="btn btn-primary" id="stop4">
+
+              </button>
+
+              <div class="hsl-data4" id="pysakki4">
+
+              </div>
+
+            </div>
+
+            <div class="card2">
+              <button class="btn btn-primary" id="stop5">
+
+              </button>
+
+              <div class="hsl-data5" id="pysakki5">
+
+              </div>
+
+            </div>
+
+            <div class="card2">
+              <button class="btn btn-primary" id="stop6">
+
+              </button>
+
+              <div class="hsl-data6" id="pysakki6">
+
+
+              </div>
+
+            </div>
+          </div>
+        </ul>
       </div>
-      <div class="card-group">
-        <div class="card" style="width: 18rem;">
-          <div class="card-header" id="stop4">
 
-          </div>
-          <ul class="list-group list-group-flush">
-            <div class="hsl-data4">
+    </section><br><br>
 
-            </div>
-          </ul>
-        </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XBbF9lbcpiY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <div class="card" style="width: 18rem;">
-          <div class="card-header" id="stop5">
 
-          </div>
-          <ul class="list-group list-group-flush">
-            <div class="hsl-data5">
+  </main>
 
-            </div>
-          </ul>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <div class="card-header" id="stop6">
-
-          </div>
-          <ul class="list-group list-group-flush">
-            <div class="hsl-data6">
-
-            </div>
-          </ul>
-        </div>
-      </div>
-
-    </ul>
-  </section><br><br>
-  <section id="contact">
-    <h2>Yhteystiedot</h2><br>
-    <h3>Käyntisoite</h3>
-    <p>Karaportti 2<br>02610 Espoo</p>
-    <h3>Postiosoite</h3>
-    <p>Metropolia Ammattikorkeakoulu<br>
-      PL 4070<br>
-      00079 Metropolia</p>
-    <h3>Aukioloajat</h3>
-    <p>Ma - pe  7:30 - 21:00<br>
-      HUOM. Ulko-ovet suljetaan klo 20:30.</p>
-    <h3>Aulapalvelut</h3>
-    <p>040 545 1572<br>
-      aulapalvelut.karamalmi@metropolia.fi </p>
-  </section><br>
-</main>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Tänne sitten viikon ruokalistaa tai jotain.. <br>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quod veniam, temporibus dolorum adipisci
-      incidunt doloribus illum rerum modi libero consequuntur perferendis! Illum sunt eaque doloremque nemo? Ducimus,
-      soluta adipisci?*10
-    </p>
+  <footer>
+    <br><section id="contact"></section><br>
+  </footer>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Tänne sitten viikon ruokalistaa tai jotain.. <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quod veniam, temporibus dolorum adipisci
+        incidunt doloribus illum rerum modi libero consequuntur perferendis! Illum sunt eaque doloremque nemo? Ducimus,
+        soluta adipisci?*10
+      </p>
+    </div>
   </div>
 </div>
 </body>

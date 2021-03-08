@@ -1,6 +1,41 @@
 @media screen and (min-width: 1100px) {
   nav, header, main {
-      max-width: 1100px;
-      margin: auto;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .btn-orange-moon {
+    display: none;
+  }
+
+  #restaurantnav {
+    display: block;
+  }
+  #weathernav {
+    display: block;
+  }
+  #transport {
+    display: block;
+  }
+  #pysakki1 {
+    display: none;
+  }
+  #pysakki2 {
+    display: none;
+  }
+  #pysakki3 {
+    display: none;
+  }
+  #pysakki4 {
+    display: none;
+  }
+  #pysakki5 {
+    display: none;
+  }
+  #pysakki6 {
+    display: none;
   }
 }

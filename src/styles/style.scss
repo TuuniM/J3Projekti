@@ -15,10 +15,16 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
+  width: 100%;
 }
 
 a {
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+a:hover{
   text-decoration: none;
 }
 
@@ -45,8 +51,9 @@ nav {
   color: #fff;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
-  padding: 0.5rem 1rem;
+  z-index: 100;
+//  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -68,9 +75,11 @@ nav ul li a:hover {
   color: #ffa853;
 }
 
+/*
 nav span {
   width: 20vw;
 }
+
 
 #search {
   width: 100%;
@@ -99,7 +108,7 @@ nav span {
 
 #search-img > svg {
   fill:  var(--main-em-color);
-}
+} */
 
 #showcase {
   display: flex;
@@ -153,6 +162,11 @@ nav span {
   border-right: 10vw solid transparent;
 }
 
+#otsikko {
+  display: none;
+}
+
+
 .info-area {
   display: flex;
   justify-content: center;
@@ -161,6 +175,7 @@ nav span {
 }
 
 #info-text {
+  display: none;
   width: 80vw;
   padding: 2em 0;
   text-align: center;
@@ -176,12 +191,13 @@ nav span {
 }
 
 .restaurant {
-  width: 48%;
+  width: 100%;
   padding: 1em;
-  background-color: #f3f3f3;
+//  background-color: #337ab7;
+  background-color: var(--main-em-color);
+  color: white;
   margin: 1em 0;
-  border: 1px solid var(--main-em-color);
-  border-radius: 2px;
+  border-radius: 22px;
   display: flex;
 }
 
@@ -223,6 +239,7 @@ ul {
   align-items: baseline;
 }
 
+/*
 #location-icon {
   width: 25px;
   position: relative;
@@ -232,6 +249,8 @@ ul {
 #location-icon:hover {
   fill: var(--main-bg-color);
 }
+*/
+
 
 /* The Modal (background) */
 .modal {
@@ -246,6 +265,7 @@ ul {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+
 
 /* Modal Content/Box */
 .modal-content {
@@ -294,20 +314,85 @@ ul {
 }
 
 
+.carousel-container{
+  width: 80%;
+  height: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-indicators li {
+  border: 1px solid #ff853f;
+  background-color: #ff853f;
+}
+
+.carousel-indicators {
+  bottom: -8px;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+  left: 23%;
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+  right: 23%
+}
+
+#tausta {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  background-color: white;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--main-em-color);
+}
+
+#contact {
+  color: white;
+}
+
+#tiedotteet {
+  color: white;
+}
+
 .weather-card {
   margin: 60px auto;
-  height: 740px;
+  height: 490px;
   width: 450px;
   background: #fff;
   box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+}
+
+
+
+#huomisetsaat {
+  color: white;
+}
+
+.weather-card {
+  margin: 13px auto;
+  height: 740px;
+  width: 450px;
+  box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
 }
 .weather-card .top {
   position: relative;
   height: 570px;
   width: 100%;
   overflow: hidden;
-  background: url("https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722376/after_noon.png") no-repeat;
+  // background: url("https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722376/after_noon.png") no-repeat;
+  background: rgba(0, 0, 0, 0.15);
   background-size: cover;
   background-position: center center;
   text-align: center;
@@ -380,7 +465,7 @@ ul {
 }
 .weather-card .bottom {
   padding: 0 30px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.2);
 }
 .weather-card .bottom .wrapper .forecast {
   overflow: hidden;
@@ -448,11 +533,44 @@ ul {
   color: white;
 }
 
-.carousel-container{
-  width: 80%;
-  height: 70%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.weather-card {
+  margin: 15px auto;
+  height: 494px;
+  width: 36%;
+  border-radius: 8%;
 }
 
+.weather-card .top .wrapper {
+  padding: 0px;
+}
+
+.weather-card .top {
+  position: relative;
+  height: 434px;
+};
+
+.card {
+  width: 35%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 4.25rem;
+}
+
+.card2 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 4.25rem;
+}

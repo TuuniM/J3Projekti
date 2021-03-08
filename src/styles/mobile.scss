@@ -1,12 +1,14 @@
 @media screen and (max-width: 768px) {
   nav {
-    background-color: var(--main-bg-color);
+//    background-color: var(--main-bg-color);
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   }
 
   /* Show Hamburger */
   nav label {
     display: inline-block;
-    color: white;
+    color: var(--main-em-color);
     font-style: normal;
     font-size: 1.2em;
     padding: 10px;
@@ -23,7 +25,10 @@
 
   #logo-min-text {
     display: inline-block;
-  //  background: white url(../assets/img/metropolia-logo.png) no-repeat
+    top: 7px;
+    // background: url(../assets/img/metropolia-logo.png) no-repeat;
+    width: 80px;
+    height: 40px;
   }
 
   nav,
@@ -35,14 +40,15 @@
   }
 
   nav ul li a:hover {
-    background-color: var(--main-em-color);
+    background-color: white;
     border-radius: 0;
     color: #ffaa6e;
   }
 
   nav ul li a {
     display: block;
-    color: white;
+//    color: white;
+    color: var(--main-em-color);
   }
 
   nav span {
@@ -56,13 +62,21 @@
   }
 
   .info-area {
-    background: white url(../assets/img/karamalmiulkovaakanokia.jpg) no-repeat
-      center center/cover;
+    background: white url(../assets/img/karamalmikesa.jpg) no-repeat
+    center center/cover;
+    height: 205px;
   }
 
   #info-text {
-    background-color: rgba(255, 255, 255, 0.8);
+    display: block;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
     font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 1em 0;
   }
 
   .restaurant {
@@ -91,5 +105,245 @@
   #homenav {
     display: none;
   }
+
+  .weather-card {
+    margin: 13px auto;
+    height: 740px;
+    width: 450px;
+    box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0);
+  }
+  .weather-card .top {
+    position: relative;
+    height: 570px;
+    width: 100%;
+    overflow: hidden;
+    // background: url("https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722376/after_noon.png") no-repeat;
+    background: rgba(0, 0, 0, 0.15);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+  }
+  .weather-card .top .wrapper {
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  .weather-card .top .wrapper .mynav {
+    height: 20px;
+  }
+  .weather-card .top .wrapper .mynav .lnr {
+    color: #fff;
+    font-size: 20px;
+  }
+  .weather-card .top .wrapper .mynav .lnr-chevron-left {
+    display: inline-block;
+    float: left;
+  }
+  .weather-card .top .wrapper .mynav .lnr-cog {
+    display: inline-block;
+    float: right;
+  }
+  .weather-card .top .wrapper .heading {
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .weather-card .top .wrapper .location {
+    margin-top: 20px;
+    font-size: 21px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .weather-card .top .wrapper .temp {
+    margin-top: 20px;
+  }
+  .weather-card .top .wrapper .temp a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .weather-card .top .wrapper .temp a .temp-type {
+    font-size: 85px;
+  }
+  .weather-card .top .wrapper .temp .temp-value {
+    display: inline-block;
+    font-size: 85px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .weather-card .top .wrapper .temp .deg {
+    display: inline-block;
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+  .weather-card .top:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .weather-card .bottom {
+    padding: 0 30px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .weather-card .bottom .wrapper .forecast {
+    overflow: hidden;
+    margin: 0;
+    font-size: 0;
+    padding: 0;
+    padding-top: 20px;
+    max-height: 155px;
+  }
+  .weather-card .bottom .wrapper .forecast a {
+    text-decoration: none;
+    color: #000;
+  }
+  .weather-card .bottom .wrapper .forecast .go-up {
+    text-align: center;
+    display: block;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .weather-card .bottom .wrapper .forecast li {
+    display: block;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.25);
+    line-height: 1em;
+    margin-bottom: 30px;
+  }
+  .weather-card .bottom .wrapper .forecast li .date {
+    display: inline-block;
+  }
+  .weather-card .bottom .wrapper .forecast li .condition {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    font-size: 25px;
+  }
+  .weather-card .bottom .wrapper .forecast li .condition .temp {
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 2px;
+  }
+  .weather-card .bottom .wrapper .forecast li .condition .temp .deg {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 3px;
+    vertical-align: top;
+  }
+  .weather-card .bottom .wrapper .forecast li .condition .temp .temp-type {
+    font-size: 20px;
+  }
+  .weather-card .bottom .wrapper .forecast li.active {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  #saanyt {
+    color: white;
+    font-size: 80px;
+  }
+
+  #tulevasaa {
+    color: white;
+  }
+
+  .btn-orange-moon {
+    display: none;
+    background: #fc4a1a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    width: 100%;
+  }
+
+  .weather-card {
+    margin: 15px auto;
+    height: 494px;
+    width: 95%;
+    border-radius: 8%;
+  }
+
+  .weather-card .top .wrapper {
+    padding: 0px;
+  }
+
+  ol, ul {
+    margin-top: 0;
+    margin-bottom: -7px;
+  }
+
+  .weather-card .top {
+    position: relative;
+    height: 434px;
+  };
+
+  .btn-group, .btn-group-vertical {
+    position: absolute;
+    right: 2%;
+    top: 21%;
+  }
+
+
+  #pysakki1 {
+    display: none;
+  }
+  #pysakki2 {
+    display: none;
+  }
+  #pysakki3 {
+    display: none;
+  }
+  #pysakki4 {
+    display: none;
+  }
+  #pysakki5 {
+    display: none;
+  }
+  #pysakki6 {
+    display: none;
+  }
+
+
+  .card {
+    width: 95%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 4.25rem;
+  }
+
+  .carousel-container{
+    width: 100%;
+
+  }
+
+  #otsikko {
+    display: block;
+    font-weight: bold;
+    font-size: 2.5em;
+//    color: var(--main-em-color);
+  color: white;
+    font-family: 'Roboto Slab', serif;
+  }
+
 
 }
