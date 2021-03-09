@@ -10,12 +10,10 @@
 
 :root {
   --main-em-color: #ff5900;
-  /* #AC6565 */
   --main-bg-color: #ff5900;
 }
 
 body {
-//  font-family: 'Lato', sans-serif;
   font-family: 'Fira Sans', sans-serif;
   font-size: 1.5em;
   width: 100%;
@@ -54,7 +52,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-//  padding: 0.5rem 1rem;
   padding: 1rem 1.5rem;
   font-weight: bold;
   font-size: 1.2em;
@@ -77,40 +74,6 @@ nav ul li a:hover {
   color: #ffa853;
 }
 
-/*
-nav span {
-  width: 20vw;
-}
-
-
-#search {
-  width: 100%;
-  min-width: 50px;
-  box-sizing: border-box;
-  padding: 0.5rem 1.5rem 0.5rem 35px;
-  margin: 0.5rem 0;
-  display: inline-block;
-  border: 1px solid var(--main-em-color);
-  border-radius: 4px;
-  outline: none;
-
-}
-#search-form {
-  position: relative;
-}
-
-#search-img {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10px;
-}
-
-#search-img > svg {
-  fill:  var(--main-em-color);
-} */
 
 #showcase {
   display: flex;
@@ -200,6 +163,7 @@ nav span {
 //  background-color: #337ab7;
   background-color: var(--main-em-color);
   color: white;
+  text-align: left;
   margin: 1em 0;
   border-radius: 22px;
   display: flex;
@@ -577,4 +541,9 @@ footer {
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: 4.25rem;
+}
+
+#weathernav {
+  position: absolute;
+  right: 0px;
 }

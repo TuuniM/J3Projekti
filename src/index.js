@@ -136,6 +136,7 @@ const languageChange = () => {
     reitit.innerHTML = `Reitit`;
     yhteystiedot.innerHTML = `Yhteystiedot`;
     slogan.innerHTML = `Karamalmin Kampus`;
+    otsikko.innerHTML = `Karamalmin Kampus`;
     tiedotteet.innerHTML = `Tiedotteet`;
     infotext.innerHTML = `Metropolian kampukset ovat avoinna, mutta 31.3.2021 asti kaikkea muuta kuin välttämätöntä asiointia kampuksilla pyydetään välttämään. Kampuksilla asioitaessa käytetään maskia ja noudatetaan muitakin turvatoimia. <br><br>  Seuraamme aktiivisesti viranomaisten ohjeistuksia koronavirukseen liittyen ja muutamme niiden mukaisesti tarvittaessa toimintaamme.`;
     saalinkki.innerHTML = `Sää`;
@@ -213,6 +214,7 @@ const languageChange = () => {
     reitit.innerHTML = `Transport`;
     yhteystiedot.innerHTML = `Contact`;
     slogan.innerHTML = `Karamalmi Campus`;
+    otsikko.innerHTML = `Karamalmi Campus`;
     tiedotteet.innerHTML = `Releases`;
     infotext.innerHTML = `Metropolia's campuses are still open and we operate in accordance with security arrangements. Metropolia's campuses are open, but until 31.3.2021, anything other than necessary visits to the campuses should be avoided based on the new regional guidelines and recommendations.<br><br>   We actively follow the authorities' instructions regarding the coronavirus and, if necessary, change our operations accordingly.`;
     saalinkki.innerHTML = `Weather`;
