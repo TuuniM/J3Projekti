@@ -23,7 +23,7 @@ module.exports = {
       ]
     }),
     new HtmlWebpackPlugin({
-      title: 'WTMP Kukkuu',
+      title: 'WTMP Campus',
       meta: {
         viewport: 'width=device-width, initial-scale=1.0'
       },
@@ -40,14 +40,14 @@ module.exports = {
       skipWaiting: true,
     }),
     new WebpackPwaManifest({
-      name: 'Lunch Progressive Web App',
-      short_name: 'LunchPWA',
-      description: 'Lunch lists Progressive Web App!',
+      name: 'Metropolia Karamalmi Campus Progressive Web App',
+      short_name: 'KaramalmiPWA',
+      description: 'Karamalmi Campus Progressive Web App!',
       background_color: '#ffffff',
       crossorigin: 'use-credentials',
       icons: [
         {
-          src: path.resolve('src/assets/icon.png'),
+          src: path.resolve('src/assets/img/metropolia-logo.png'),
           sizes: [96, 128, 192, 256, 384, 512]
         },
       ]
