@@ -8,8 +8,8 @@ import {fazerProxyUrl} from "../settings";
 import {fetchGetJson} from "./network";
 
  // TODO: Fix hard coded date, note that Karaportti is closed for now
-const weeklyUrlEn = `${fazerProxyUrl}/api/restaurant/menu/week?language=en&restaurantPageId=180118&weekDate=`;
-const weeklyUrlFi = `${fazerProxyUrl}/api/restaurant/menu/week?language=fi&restaurantPageId=180118&weekDate=`;
+const weeklyUrlEn = `${fazerProxyUrl}/api/restaurant/menu/week?language=en&restaurantPageId=270540&weekDate=`;
+const weeklyUrlFi = `${fazerProxyUrl}/api/restaurant/menu/week?language=fi&restaurantPageId=270540&weekDate=`;
 
 /**
  * Returns a daily menu array from Fazer weekly json data
