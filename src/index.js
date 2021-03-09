@@ -69,8 +69,7 @@ const restaurants = [{
   displayName: 'Karaportin Fazer',
   name: 'fazer-kp',
 //  id: 180118, avoina olevan ravintolan testaus
-  id: 180118,
-//  id: 270540,
+  id: 270540,
   type: FazerData
 }];
 
@@ -328,7 +327,7 @@ const loadHSLData = async () => {
   const pysakki = document.createElement('div');
   pysakki.innerHTML = `<i class="fas fa-bus" id="bus"></i><p>E1808</p><h4>${stop.name}</h4><ul>`;
   for (const ride of stop.stoptimesWithoutPatterns) {
-    stopElement.innerHTML += `<li><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
+    stopElement.innerHTML += `<li class="bussilista"><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
       ${ride.trip.tripHeadsign}
       ${HSLData.formatTime(ride.scheduledDeparture)}</li>`;
   }
@@ -343,7 +342,7 @@ const loadHSLData = async () => {
   const pysakki2 = document.createElement('div');
   pysakki2.innerHTML = `<i class="fas fa-bus" id="bus"></i><p>E1807</p><h4>${stop1.name}</h4><ul>`;
   for (const ride of stop1.stoptimesWithoutPatterns) {
-    stopElement1.innerHTML += `<li><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
+    stopElement1.innerHTML += `<li class="bussilista"><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
       ${ride.trip.tripHeadsign}
       ${HSLData.formatTime(ride.scheduledDeparture)}</li>`;
   }
@@ -358,7 +357,7 @@ const loadHSLData = async () => {
   const pysakki3 = document.createElement('div');
   pysakki3.innerHTML = `<i class="fas fa-bus" id="bus"></i><p>E1815</p><h4>${stop2.name}</h4><ul>`;
   for (const ride of stop2.stoptimesWithoutPatterns) {
-    stopElement2.innerHTML += `<li><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
+    stopElement2.innerHTML += `<li class="bussilista"><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
       ${ride.trip.tripHeadsign}
       ${HSLData.formatTime(ride.scheduledDeparture)}</li>`;
   }
@@ -373,7 +372,7 @@ const loadHSLData = async () => {
   const pysakki4 = document.createElement('div');
   pysakki4.innerHTML = `<i class="fas fa-bus" id="bus"></i><p>E1814</p><h4>${stop3.name}</h4><ul>`;
   for (const ride of stop3.stoptimesWithoutPatterns) {
-    stopElement3.innerHTML += `<li><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
+    stopElement3.innerHTML += `<li class="bussilista"><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
       ${ride.trip.tripHeadsign}
       ${HSLData.formatTime(ride.scheduledDeparture)}</li>`;
   }
@@ -388,7 +387,7 @@ const loadHSLData = async () => {
   const pysakki5 = document.createElement('div');
   pysakki5.innerHTML = `<i class="fas fa-bus" id="bus"></i><p>E1854</p><h4>${stop4.name}</h4><ul>`;
   for (const ride of stop4.stoptimesWithoutPatterns) {
-    stopElement4.innerHTML += `<li><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
+    stopElement4.innerHTML += `<li class="bussilista"><i class="fas fa-bus" id="bus"></i>  <b>${ride.trip.routeShortName}</b>
       ${ride.trip.tripHeadsign}
       ${HSLData.formatTime(ride.scheduledDeparture)}</li>`;
   }
@@ -403,7 +402,7 @@ const loadHSLData = async () => {
   const pysakki6 = document.createElement('div');
   pysakki6.innerHTML = `<i class="fas fa-subway" id="train"></i><p>E1833</p><h4>${stop5.name}</h4><ul>`;
   for (const ride of stop5.stoptimesWithoutPatterns) {
-    stopElement5.innerHTML += `<li><i class="fas fa-subway" id="train"></i>  <b>${ride.trip.routeShortName}</b>
+    stopElement5.innerHTML += `<li class="bussilista"><i class="fas fa-subway" id="train"></i>  <b>${ride.trip.routeShortName}</b>
       ${ride.trip.tripHeadsign}
       ${HSLData.formatTime(ride.scheduledDeparture)}</li>`;
   }
@@ -412,14 +411,12 @@ const loadHSLData = async () => {
   document.querySelector('#stop6').appendChild(pysakki6);
 };
 
-const loadWeatherData = async (lat, lon) => {
+const loadWeatherData = async () => {
   try {
-    const weather = await SaaData.getHourlyWeather(lat, lon,
-      'fi');
+    const weather = await SaaData.Weather();
     renderWeatherData(weather);
   } catch (error) {
     console.log(error.message);
-
   }
 };
 
