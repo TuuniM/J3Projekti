@@ -68,9 +68,9 @@ const restaurants = [{
 }, {
   displayName: 'Karaportin Fazer',
   name: 'fazer-kp',
-//  id: 270540, karaportti
-  //testataan toista ravintolaa
+//  id: 180118, avoina olevan ravintolan testaus
   id: 180118,
+//  id: 270540,
   type: FazerData
 }];
 
@@ -96,11 +96,16 @@ const renderMenu = (menuData, restaurant) => {
   const ul = document.createElement('ul');
   for (const item of menuData) {
     const listItem = document.createElement('li');
+    listItem.setAttribute("id", "ruuat");
+    const space = document.createElement('p');
     listItem.textContent = item;
+    space.innerHTML = `<br>`;
     ul.appendChild(listItem);
+    ul.appendChild(space);
   }
   restaurantDiv.appendChild(ul);
 };
+
 
 /**
  * Displays a notification message instead of dishes
@@ -146,7 +151,7 @@ const languageChange = () => {
     price.innerHTML = `<br>Lounaan hinta opiskelijoille 1,90€/2,70€/5,71€`;
     switchlang.innerHTML = `EN`;
     julkinenliikenne.innerHTML = `HSL Julkinen Liikenne`;
-    menu.innerHTML = `Viikon Ruokalista`;
+    menu.innerHTML = `Päivän Ruokalista`;
     carouseldatat.innerHTML = `<div class="item active">
           <img src="./assets/img/koronakaruselli/Dia1.JPG" alt="1 slide" style="width:100%;">
         </div>
@@ -224,7 +229,7 @@ const languageChange = () => {
     price.innerHTML = `<br>Lunch price to students 1,90€/2,70€/5,71€`;
     switchlang.innerHTML = `FI`;
     julkinenliikenne.innerHTML = `HSL Public Transport`;
-    menu.innerHTML = `Menu of the Week`;
+    menu.innerHTML = `Menu of the Day`;
     carouseldatat.innerHTML = `<div class="item active">
           <img src="./assets/img/koronakaruselli/Dia1.JPG" alt="1 slide" style="width:100%;">
         </div>
@@ -305,7 +310,11 @@ const loadAllMenuData = async () => {
     } catch (error) {
       console.error(error);
       // notify user if errors with data
-      renderNoDataNotification('No data available..', restaurant.name);
+      if (languageSetting === 'fi') {
+      renderNoDataNotification('Ei ruokalistaa saatavilla.', restaurant.name);
+      } else {
+        renderNoDataNotification('No menu available.', restaurant.name);
+      }
     }
   }
 };

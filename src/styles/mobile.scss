@@ -108,16 +108,15 @@
     margin: 13px auto;
     height: 740px;
     width: 450px;
-    box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+//    box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
     overflow: hidden;
-    background: rgba(0, 0, 0, 0);
+//    background: rgba(0, 0, 0, 0);
   }
   .weather-card .top {
     position: relative;
     height: 570px;
     width: 100%;
     overflow: hidden;
-    // background: url("https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722376/after_noon.png") no-repeat;
     background: rgba(0, 0, 0, 0.15);
     background-size: cover;
     background-position: center center;
@@ -187,7 +186,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
   }
   .weather-card .bottom {
     padding: 0 30px;
@@ -258,6 +256,7 @@
   #tulevasaa {
     color: white;
   }
+
 
   .btn-orange-moon {
     display: none;
